@@ -22,8 +22,23 @@
 <tr><td><label>Email ID: </label></td> <td><input type="email"></td></tr>
 <tr><td><label>Password: </label> </td><td><input type="password" name="pwd"></td></tr>
 <tr><td><label>Full name: </label></td> <td><input type="text"></td></tr>
-<tr><td><label>User Type: </label> </td><td><input type="text"></td></tr>
-<tr><td><label>Address :   </label></td> <td><input type="text"></td></tr><br>
+<tr>
+    <td><label>User Type: </label></td>
+    <td>
+<select name="utype" class="utype-box">
+<option value="None">None</option>
+<option value="Patient">Patient</option>
+<option value="Doctor">Doctor</option>
+
+
+</select>    
+    
+    </td>
+
+    </tr>
+    <tr><td><label>Specialization: </label></td> <td><input type="text"></td></tr>
+
+<tr><td><label>Address :   </label></td> <td><textarea rows=5></textarea></td></tr>
 
 <tr><td><input type="submit" value="SignUp"></td><td><a href="login.html">Existing user</a></td></tr>
 </table>
@@ -33,7 +48,7 @@
 </div>
     
 
-
+<div class="center">Copy rights reserved to ABC Hospital</div>
 
 </body>
 </html>

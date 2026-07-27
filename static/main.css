@@ -15,6 +15,12 @@
     margin: auto;       ;
 }
 
+.utype-box{
+
+    width: 180px;
+
+}
+
 .input-form{
     border: 1px solid blue;
     width: 600px;

@@ -1,25 +1,21 @@
 .container{
-
     text-align: center;
     margin: auto;
     border: 2px solid black;
-    height: 400px;
-
+    height: 560px;
 }
 
-
-
 .center{
-
     text-align: center;
-    margin: auto;       ;
+    margin: auto;
+
+}
+.cap{
+    color: blue;
 }
 
 .utype-box{
-
-    width: 180px;
-
-}
+    width: 180px;}
 
 .input-form{
     border: 1px solid blue;
@@ -28,17 +24,14 @@
     height: 300px;
     border-radius: 10px;
     font-size: 16px;
-    text-align: justify;    
+    text-align: justify;}
 
-}
 .login-container{
-
     text-align: center;
     margin: auto;
     border: 2px solid black;
-    height: 400px;
+    height: 400px;}
 
-}
 .login-form{
     border: 1px solid blue;
     width: 600px;
@@ -46,6 +39,39 @@
     height: 200px;
     border-radius: 10px;
     font-size: 16px;
-    text-align: justify;    
+    text-align: justify;}
+
+.dashboardform{
+    border: 1px solid blue;
+    margin: auto;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+
+.center-main{
+    text-align: center;
+    border: 1px solid blue;
+
+}
+
+
+
+.patient{
+    margin: auto;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+
+}
+.doctor{
+    margin: auto;
+    text-align: center;     
+    height: 100px;
+    width: 100px;
+    justify-content: center ;
+
 
 }

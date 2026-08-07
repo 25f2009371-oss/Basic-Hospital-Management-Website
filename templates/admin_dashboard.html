@@ -20,23 +20,30 @@
 <h3 style="justify-content: center; color: blue;">Admin Dashboard  </h3>
 
 
-<div class="cap"><caption style="color;">Registered Doctors</caption></div>
-<table class="doctor" border="1px solid black" style="align-items: center;">
+<div class="section-label"><caption style="color;">Registered Doctors</caption></div>
+<table class="doctor" border="1" style="border-collapse: collapse; align-items: center;">
 <tr><td>Doctor Name: </td><td><input type="button" value="edit"></td><td><input type="button" value="delete"></td></tr>
 <tr><td>Doctor Name: </td><td><input type="button" value="edit"></td><td><input type="button" value="delete"></td></tr>
 </table>
 
     <!--border="3-->
-<div class="cap"><caption style="color;">Registered Patients</caption></div>
-<table class="patient" border="1px solid" solid black" style="align-items: center;">
+<div class="section-label"><caption style="color;">Registered Patients</caption></div>
+<table class="patient" border="1" style="border-collapse: collapse; align-items: center;">
 <tr><td>Patient Name: </td><td><input type="button" value="edit"></td><td><input type="button" value="delete"></td></tr>
 <tr><td>Patient Name: </td><td><input type="button" value="edit"></td><td><input type="button" value="delete"></td></tr>
 </table>
 
-<div class="cap"><caption style="color;">Upcoming Appointments</caption></div>
-<table class="patient" border="1px solid" solid black" style="align-items: center;">
-<tr><td>Patient</td><td>Doctor</td><td>Specialization</td><td><input type="button" value="view"></td></tr>
-<tr><td>Patient</td><td>Doctor</td><td>Specialization</td><td><input type="button" value="view"></td></tr>
+<div class="section-label"><caption style="color;">Upcoming Appointments</caption></div>
+<table class="patient" border="1" style="border-collapse: collapse; align-items: center;">
+
+<tr><td>Patient</td><td>Doctor</td><td>Specialization</td><td>Action</td></tr>
+
+{% for d in app_data %}
+
+<tr><td>{{d.pname}}</td><td>{{d.pname}}</td><td>{{d.spz}}</td><td><input type="button" value="view"></td></tr>
+
+{% endfor %}
+
 </table>
 
 

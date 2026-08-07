@@ -1,23 +1,26 @@
-from flask import Flask,render_template
+from flask import Flask
+from models import db   # import the db object, not everything with *
 
-app=Flask(__name__)
+app = None
 
+def setup_app():
+    global app
+    app = Flask(__name__)
 
+    # Correct config key
+    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///hms.sqlite3"
+    app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False  # optional, avoids warnings
 
-@app.route("/login")
-def signin():
-    return render_template("login.html")
+    db.init_app(app)  # link db with app
+    print("HMS app setup done....")
 
-app_dct=[{"dname":"abc","pname":"xyz","spz":"Neurology"},
-         {"dname":"pqr","pname":"stu","spz":"Cardiology"},
-         {"dname":"qqpqqceqr","pname":"qeq","spz":"Nephrology"},
-         {"dname":"eqqr","pname":"stu","spz":"Dentist"}
-    ]
+    app.app_context().push()  # push context so models can use it
 
+    print("HMS app setup done....")
 
-@app.route("/admin")
-def admin_console():
-    return render_template("admin_dashboard.html",app_data=app_dct)
+setup_app()
 
-if __name__=="__main__":
+from controller import *
+
+if __name__ == "__main__":
     app.run(debug=True)

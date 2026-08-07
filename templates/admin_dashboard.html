@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin dashboard</title>
-    <link rel="stylesheet" href="/static/main.css">
-
-</head>
-<body>
-<div class="container">
-<div class="center">  <h1>ABC Hospital</h1></div>
+{% extends "base.html" %}
 <div style="text-align: right;">
     &nbsp<input type="text" name="searchtext"> 
     | 
@@ -36,7 +25,7 @@
 <div class="section-label"><caption style="color;">Upcoming Appointments</caption></div>
 <table class="patient" border="1" style="border-collapse: collapse; align-items: center;">
 
-<tr><td>Patient</td><td>Doctor</td><td>Specialization</td><td>Action</td></tr>
+<tr><th>Patient</th><th>Doctor</th><th>Specialization</th><th>Action</th></tr>
 
 {% for d in app_data %}
 
@@ -45,13 +34,5 @@
 {% endfor %}
 
 </table>
+{% endblock %}
 
-
-
-
-</div>
-<div class="center" style="text-align: center; justify-content: center;">Copy rights reserved to ABC Hospital</div>
-
-</div>
-
-</html>
